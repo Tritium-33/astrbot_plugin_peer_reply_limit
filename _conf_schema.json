@@ -1,0 +1,32 @@
+{
+  "enabled": {
+    "description": "启用限额",
+    "type": "bool",
+    "default": true,
+    "hint": "只限制登记的QQ账号，不改变唤醒、模型、人设和记忆配置。"
+  },
+  "target_ids": {
+    "description": "登记ID",
+    "type": "list",
+    "default": [],
+    "hint": "填写对方真实QQ号，每行一个，不填昵称。各ID独立计数；空列表不限制任何人。AstrBot配置的管理员不受限。"
+  },
+  "window_seconds": {
+    "description": "统计秒数",
+    "type": "int",
+    "default": 1800,
+    "hint": "滑动窗口：1800为半小时，3600为一小时，必须大于0。计数保存在内存，重启或重载插件后重置。"
+  },
+  "max_replies": {
+    "description": "回复上限",
+    "type": "int",
+    "default": 3,
+    "hint": "窗口内最多成功回复几轮，必须大于0。@、关键词和普通接话都计数；同一输入的多段回答只算一轮。"
+  },
+  "group_ids": {
+    "description": "生效群",
+    "type": "list",
+    "default": [],
+    "hint": "每行一个群号；留空适用于全部QQ群，私聊不受影响。不同群分别计数，不自动继承其他插件的免冷却群。"
+  }
+}

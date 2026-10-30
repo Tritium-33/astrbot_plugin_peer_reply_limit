@@ -1,0 +1,14 @@
+name: astrbot_plugin_peer_reply_limit
+display_name: 按ID回复限额
+short_desc: 限制指定QQ账号每半小时或每小时的回复轮数，避免机器人持续互聊。
+desc: 按机器人实例、群聊和发送者QQ独立统计成功回复，支持滑动窗口、并发预占与分段去重；不调用模型，不改变原有唤醒及回复方式。
+version: 0.1.0
+author: Tritium-33
+repo: https://github.com/Tritium-33/astrbot_plugin_peer_reply_limit
+astrbot_version: '==4.29.3'
+support_platforms:
+  - aiocqhttp
+tags:
+  - group
+  - anti-loop
+  - rate-limit
